@@ -13,6 +13,16 @@ pub struct Vector3 {
 }
 
 impl Vector3 {
+    pub const ONE: Vector3 = Vector3 {
+        x: 1.0,
+        y: 1.0,
+        z: 1.0,
+    };
+
+    pub fn new(x: f64, y: f64, z: f64) -> Vector3 {
+        Vector3 { x, y, z }
+    }
+
     pub fn length(&self) -> f64 {
         self.length2().sqrt()
     }
